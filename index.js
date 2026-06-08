@@ -198,4 +198,15 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log('Kavkaz AI Travel Bot running on port ' + PORT);
+});const http = require('http');
+
+const PORT = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+  res.end('Kavkaz AI Travel Bot is running');
+});
+
+server.listen(PORT, () => {
+  console.log('Server running on port ' + PORT);
 });
