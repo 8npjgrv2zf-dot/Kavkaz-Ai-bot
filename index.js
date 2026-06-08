@@ -1,9 +1,9 @@
-const https = require('https');
-const http = require('http');
+const express = require('express');
+const app = express();
 
-const BOT_TOKEN = process.env.8146981663:AAEQkwJuCGPVwXU4rGIgWEjDAsdf_B83gqo;
-const ADMIN_ID = '8759424842';
-const userData = {};
+const BOT_TOKEN = process.env.BOT_TOKEN;
+const ADMIN_ID = process.env.ADMIN_ID;
+const PORT = process.env.PORT || 3000;
 
 function sendMessage(chatId, text, keyboard) {
   const markup = keyboard ? {
